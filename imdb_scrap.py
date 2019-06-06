@@ -1,4 +1,4 @@
-# imdb user reviews, imdb user ratings scraper
+
 import time
 
 import requests
