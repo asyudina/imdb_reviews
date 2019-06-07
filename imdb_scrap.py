@@ -35,7 +35,7 @@ maxclicks = s//25
 print('maxclicks='+str(maxclicks))
 
 
-driver = webdriver.Chrome("/Users/a.yudina/Downloads/imdb-master/chromedriver")
+driver = webdriver.Chrome("./chromedriver")
 wait = WebDriverWait(driver, 100)
 
 driver.get(url_add)
@@ -55,11 +55,10 @@ print('out of loop')
 time.sleep(25)
 source_code = driver.page_source
 
-# not source_code.text since here source_code is obtained from selenium is string not a beautifulsoup object
 
 plain_text = source_code
 soup = BeautifulSoup(plain_text, 'html.parser')
-# print(soup)
+
 
 database = []
 pageno = 1
